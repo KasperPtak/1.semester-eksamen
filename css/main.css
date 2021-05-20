@@ -190,11 +190,13 @@ main {
 
 }
 
-.card {
+/* #region projects */
+
+.card {   
     
-    color: var(--dark);
     margin: 100px 0;
-    width: 40%;
+    width: 45%;
+    color: var(--dark);
     font-family: var(--text-font);
 
 }
@@ -215,7 +217,7 @@ main {
 .card img {
 
     filter: grayscale(40%) blur(1px);
-    transition: transform .5s, filter 1s ease-in-out;
+    transition: transform .5s, filter .5s ease-in-out;
 }
 
 .card:hover img {
@@ -229,28 +231,63 @@ main {
     
 }
 
-.card01 {
+.cardRight {
     
     margin-left: 60%;
     
 }
 
-.card01 h4 {
+.cardRight h4 {
     text-align: left;
     
 }
 
-.card02 {
-    
-    
-}
 
-.card02 h4 {
+.cardLeft h4 {
     text-align: right;
 }
 
 
+.center {
+    text-align: center;
+       
+}
 
+.center a {
+
+    color: var(--dark);
+    font-family: var(--text-font);
+    font-size: 40px;
+    text-decoration: none;
+    
+    
+}
+
+.center a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+/* #endregion */
+
+#about {
+
+    background: hotpink;
+    height: 80vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+
+
+}
+
+.paraPortrait {
+
+    background: url("https://www.fillmurray.com/1000/500");
+    
+    
+}
 
 /* #endregion */
 
