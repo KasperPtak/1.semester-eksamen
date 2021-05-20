@@ -1,3 +1,5 @@
+@import url("https://use.typekit.net/ppx2tjg.css");
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +14,7 @@
     --blue: #3A5199;
 
     --headline-font: font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
+    --text-font: transat, sans-serif;
 }
 
 
@@ -29,7 +31,7 @@
     height: 0%;
     z-index: 999;
 
-    animation: introAnimation 1.8s;
+    /* animation: introAnimation 1.8s; */
 
 }
 
@@ -106,7 +108,7 @@
 
 /* #endregion */
 
-
+/* "global" styling */
 
 body {
     background: var(--light);
@@ -119,8 +121,13 @@ body {
     margin: 0 auto;
     max-width: 1600px;
 
-
 }
+
+.imgFluid {
+    max-width: 100%;
+    height: auto;
+}
+
 
 /* #region header */
 
@@ -167,10 +174,16 @@ header {
 
 /* #endregion */
 
+#bigHeading {
+    
+    margin: 7% 0 0 0;
+
+}
+
 /* #region main */
 main {
   
-    margin: 10% auto;
+    margin: 7% auto;
 
     /* background: hotpink; */
     
@@ -182,11 +195,38 @@ main {
     color: var(--dark);
     margin: 100px 0;
     width: 40%;
+    font-family: var(--text-font);
+
 }
 
 .card a{
     text-decoration: none;
     color: inherit;
+    font-size: 25px;
+    
+}
+
+.card:hover h4 {
+/* padding i stedet for tranform siden den skal passe i begge retninger */
+    padding: 0 20px;
+    transition: .5s ease-in-out;
+}
+
+.card img {
+
+    filter: grayscale(40%) blur(1px);
+    transition: transform .5s, filter 1s ease-in-out;
+}
+
+.card:hover img {
+
+    transform: scale(1.1);
+    filter: grayscale(0) blur(0);
+}
+
+.imgContainer {
+    overflow: hidden;
+    
 }
 
 .card01 {
@@ -199,7 +239,6 @@ main {
     text-align: left;
     
 }
-
 
 .card02 {
     
@@ -215,10 +254,6 @@ main {
 
 /* #endregion */
 
-.imgFluid {
-    max-width: 100%;
-    height: auto;
-}
 
 
 
