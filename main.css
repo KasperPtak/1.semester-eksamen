@@ -106,6 +106,8 @@
 
 /* #endregion */
 
+
+
 body {
     background: var(--light);
     color: var(--dark);
@@ -178,24 +180,36 @@ main {
 .card {
     
     color: var(--dark);
+    margin: 100px 0;
+    width: 40%;
+}
+
+.card a{
+    text-decoration: none;
+    color: inherit;
 }
 
 .card01 {
-    width: 40%;
+    
     margin-left: 60%;
-       
     
 }
+
+.card01 h4 {
+    text-align: left;
+    
+}
+
 
 .card02 {
-    width: 40%;
-     
+    
     
 }
 
-.cardHeading {
-    text-align: center;
+.card02 h4 {
+    text-align: right;
 }
+
 
 
 
