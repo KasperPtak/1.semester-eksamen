@@ -178,9 +178,18 @@ header {
     
     margin: 7% 0 0 0;
 
+    color: var(--dark);
+    font-size: 80px;
+    font-weight: 200;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
 }
 
+
+
+
 /* #region main */
+
 main {
   
     margin: 7% auto;
@@ -233,7 +242,7 @@ main {
 
 .cardRight {
     
-    margin-left: 60%;
+    margin-left: 55%;
     
 }
 
@@ -250,7 +259,7 @@ main {
 
 .center {
     text-align: center;
-       
+    margin: 5% 0;
 }
 
 .center a {
@@ -259,7 +268,6 @@ main {
     font-family: var(--text-font);
     font-size: 40px;
     text-decoration: none;
-    
     
 }
 
@@ -270,33 +278,121 @@ main {
 
 /* #endregion */
 
+/* #region about */
+
 #about {
 
-    background: hotpink;
-    height: 80vh;
+    /* background: hotpink; */
+    height: 70vh;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    
+    grid-template-columns: 3fr 5fr 1fr;
+    grid-template-rows: auto;    
 
 
 }
+
+/* @media screen and (min/max) {
+    
+} */
 
 .paraPortrait {
 
-    background: url("https://www.fillmurray.com/1000/500");
+    background: url("https://www.fillmurray.com/1000/400");
     
-    
+    min-height: 100px;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
-/* #endregion */
+.aboutContent {
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.aboutContent div {
+    /* background-color: yellow; */
+
+    padding: 0 50px;
+
+}
+
+.aboutContent div h2 {
+
+    font-size: 30px;
+    padding: 10px 0;
+
+    text-align: left;
+
+}
+
+.aboutContent div:nth-child(2) h2, .aboutContent div:nth-child(4) h2  {
+    
+    font-size: 30px;
+    padding: 10px 0;
+
+    text-align: right;
+
+}
+
+.aboutContent div p {
+    font-family: var(--text-font);
+    font-size: 19px;
+}
+
+
+.socials {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.socials a {
+    margin: 10% 0;
+    width: 30px;
+    
+}
+.socials a:hover {
+    margin: 10% 0;
+    width: 35px;
+    
+    transition: .3s ease-in;
+}
+
+.socials a:first-child img {
+    background-color: white;
+}
+
+/* #endregion about */
+
+/* #region contact */
+
+
+
+/* #endregion contact */
+
+
+
+/* #endregion main */
 
 
 
 footer {
     
-    background: var(--blue);
+    background: var(--dark);
+    color: var(--light);
     text-align: center;
     
     bottom: 0px;
@@ -307,19 +403,4 @@ footer {
 
 
 
-
-
-
-
-
-
-
-/* temp -> delete later */
-
-h1 {
-    color: var(--dark);
-    font-size: 80px;
-    font-weight: 200;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
 
