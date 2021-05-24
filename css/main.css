@@ -15,6 +15,9 @@
 
     --headline-font: font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     --text-font: transat, sans-serif;
+
+    
+
 }
 
 
@@ -127,23 +130,11 @@ body {
     height: auto;
 }
 
-.readMore {
-    text-align: center;
-    margin-bottom: 5%;
-}
-
-.readMore a {
-
-    color: var(--dark);
-    font-family: var(--text-font);
-    font-size: 40px;
-    text-decoration: none;
-    
+.hover a{
     position: relative;
-    
 }
-.readMore a:after {
 
+.hover a:after {
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
     content: "";
@@ -155,18 +146,24 @@ body {
 
     transition:  0.4s ease;
     width: 0;
-    
 }
 
-.readMore a:hover {
-    color: var(--blue);
-    
-}
-
-.readMore a:hover:after {
+.hover a:hover:after {
     width: 100%;
     left: 0;
-    
+}
+
+.readMore {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.readMore a {
+
+    color: var(--dark);
+    font-family: var(--text-font);
+    font-size: 40px;
+    text-decoration: none;    
 }
 
 
@@ -203,6 +200,7 @@ header {
     display: inline-block;
     padding: 10px 20px;
     
+    
 }
 
 #topNav ul li a{
@@ -211,7 +209,9 @@ header {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 0;
     font-size: 20px;
+    
 }
+
 
 /* #endregion */
 
@@ -226,7 +226,6 @@ header {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 }
-
 
 
 
