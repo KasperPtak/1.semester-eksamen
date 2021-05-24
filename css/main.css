@@ -31,7 +31,7 @@
     height: 0%;
     z-index: 999;
 
-    /* animation: introAnimation 1.8s; */
+    animation: introAnimation 1.8s;
 
 }
 
@@ -41,7 +41,6 @@
         
         height: 0%;
         
-
     }
 
     10% {
@@ -130,7 +129,7 @@ body {
 
 .readMore {
     text-align: center;
-    margin: 5% 0;
+    margin-bottom: 5%;
 }
 
 .readMore a {
@@ -140,12 +139,34 @@ body {
     font-size: 40px;
     text-decoration: none;
     
+    position: relative;
+    
+}
+.readMore a:after {
+
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: var(--dark);
+
+    transition:  0.4s ease;
+    width: 0;
+    
 }
 
 .readMore a:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
     color: var(--blue);
+    
+}
+
+.readMore a:hover:after {
+    width: 100%;
+    left: 0;
+    
 }
 
 
@@ -194,6 +215,7 @@ header {
 
 /* #endregion */
 
+
 #bigHeading {
     
     margin: 7% 0 0 0;
@@ -235,11 +257,13 @@ main {
     font-size: 25px;
     
 }
-
+.card h4 {
+    transition: .5s ease-in-out;
+}
 .card:hover h4 {
 /* padding i stedet for tranform siden den skal passe i begge retninger */
     padding: 0 20px;
-    transition: .5s ease-in-out;
+    
 }
 
 .card img {
@@ -285,6 +309,7 @@ main {
 #about {
 
     /* background: hotpink; */
+    margin-bottom: 20px;
     height: 70vh;
 
     display: grid;
@@ -313,36 +338,42 @@ main {
 
 .aboutContent {
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    ". div1 div1 ."
+    ". div2 div2 ."
+    ". div3 div3 ."
+    ;
+
+}
+
+.aboutContent div:nth-child(1) {
+    grid-area: div1;
+
+}
+.aboutContent div:nth-child(2) {
+    grid-area: div2;
+
+}
+.aboutContent div:nth-child(3) {
+    grid-area: div3;
 
 }
 
 .aboutContent div {
-    /* background-color: yellow; */
+    
 
     padding: 0 50px;
-
+    text-align: center;
 }
 
 .aboutContent div h2 {
 
     font-size: 30px;
-    /* padding: 10px 0; */
-    margin: 25px 0;
-    text-align: left;
-
-}
-
-.aboutContent div:nth-child(2) h2, .aboutContent div:nth-child(4) h2  {
-    
-    font-size: 30px;
-    padding: 10px 0;
-
-    text-align: right;
-
+    margin: 30px 0; 
+      
 }
 
 .aboutContent div p {
@@ -357,10 +388,6 @@ main {
 
 /* #region contact */
 
-
-
-
-/* #endregion contact */
 
 .contact h4{
     text-align: center;
@@ -378,6 +405,10 @@ main {
 .arrow {
     font-size: 35px;
 }
+
+
+
+/* #endregion contact */
 
 /* #endregion main */
 
