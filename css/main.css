@@ -286,7 +286,7 @@ main {
     height: 70vh;
 
     display: grid;
-    grid-template-columns: 3fr 5fr 1fr;
+    grid-template-columns: 3fr 5fr;
     grid-template-rows: auto;    
 
 
@@ -349,31 +349,6 @@ main {
 }
 
 
-.socials {
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-
-}
-
-.socials a {
-    margin: 10% 0;
-    width: 30px;
-    
-}
-.socials a:hover {
-    margin: 10% 0;
-    width: 35px;
-    
-    transition: .3s ease-in;
-}
-
-.socials a:first-child img {
-    background-color: white;
-}
 
 /* #endregion about */
 
@@ -398,6 +373,34 @@ footer {
     bottom: 0px;
     width: 100%;
     height: 10vh;
+}
+
+
+
+.socials {
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    
+
+}
+
+.socials a {
+    margin: 0 10%;
+    width: 30px;
+    
+}
+.socials a:hover {
+    margin: 10% 0;
+    width: 35px;
+    
+    transition: .3s ease-in;
+}
+
+.socials a:first-child img {
+    background-color: white;
 }
 
 
