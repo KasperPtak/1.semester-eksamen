@@ -20,6 +20,12 @@
 
 }
 
+html {
+
+    scroll-behavior: smooth;
+
+}
+
 
 /* #region Intro animations */
 
@@ -167,6 +173,8 @@ body {
 }
 
 
+
+
 /* #region header */
 
 header {
@@ -248,6 +256,7 @@ main {
     width: 45%;
     color: var(--dark);
     font-family: var(--text-font);
+    
 
 }
 
@@ -267,9 +276,10 @@ main {
 }
 
 .card img {
-
+    background-size: contain;
     filter: grayscale(40%) blur(1px);
     transition: transform .5s, filter .5s ease-in-out;
+    
 }
 
 .card:hover img {
@@ -280,7 +290,8 @@ main {
 
 .imgContainer {
     overflow: hidden;
-    
+    width: 100%;
+    max-height: 400px;
 }
 
 .cardRight {
@@ -308,7 +319,7 @@ main {
 
 #about {
 
-    /* background: hotpink; */
+    
     margin-bottom: 20px;
     height: 70vh;
 
@@ -319,9 +330,6 @@ main {
 
 }
 
-/* @media screen and (min/max) {
-    
-} */
 
 .paraPortrait {
 
@@ -364,7 +372,6 @@ main {
 
 .aboutContent div {
     
-
     padding: 0 50px;
     text-align: center;
 }
@@ -412,7 +419,7 @@ main {
 
 /* #endregion main */
 
-
+/* #region footer */
 
 footer {
     
@@ -465,6 +472,255 @@ footer {
 
 .footer-content a {
     width: initial;
-    padding-top: 25px;
+
+    margin: 10px 0;
+    padding: 0;
+
+}
+
+/* #endregion footer */
+
+
+/* #region projects page */
+
+
+.pjHeading {
+
+    text-align: center;
+    margin: 2% 0;
+    font-size: 80px;
+
+}
+
+.pjContainer {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 60px;
     
+
+}
+
+.pjCard {
+
+    position: relative;
+    
+}
+
+.pjImg {
+    border-radius: 10px;
+    width: 100%;
+    height: 350px;
+
+    background-image: url('../Images/nightbird.jpg');
+    background-size: cover;
+}
+.pjCard:nth-child(2) .pjImg {
+    
+    background-image: url('../Images/moonOpg.jpg');
+    
+}
+.pjCard:nth-child(3) .pjImg {
+    
+    background-image: url('../Images/cannon.png');
+    
+}
+.pjCard:nth-child(4) .pjImg {
+    
+    background-image: url('../Images/hotpink.jpg');
+    
+}
+.pjCard:nth-child(5) .pjImg {
+    
+    background-image: url('../Images/detgodebroed.jpg');
+    
+}
+.pjCard:nth-child(6) .pjImg {
+    
+    background-image: url('../Images/joernBiler.jpg');
+    
+}
+
+
+.pjCardText {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    
+    transition: .3s;
+
+}
+
+
+.pjCard a:hover .pjCardText {
+
+    opacity: 1;
+    background-color: #2f2e3370;
+    color: var(--light);
+}
+
+
+.pjCardText h1 {
+    margin-bottom: 40px;
+}
+
+
+
+/* #endregion */
+
+
+
+
+
+@media (max-width: 768px) {
+	
+    #introAnimation {
+        display: none;
+    }
+
+    .wrap {
+        width: 100%;
+        
+    }
+
+    #header {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+
+        justify-content: center;
+    }
+
+    .logo {
+        text-align: center;
+        border-bottom: 1px solid var(--dark);
+    }
+    
+    #topNav ul li {
+        padding: 10px 10px;
+    }
+
+    #bigHeading, .readMore a {
+        margin: 50px 10px;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .card {
+        margin: 0;
+        width: 100%;
+        
+    }
+
+    .card:hover h4 {
+        padding: 0;
+    }
+    .card:hover img {
+        transform: none;
+    }
+
+    .card img {
+        filter: none;
+        transition: none;
+    }
+
+    .imgContainer {
+        
+        padding: 10px;
+    }
+
+    .cardRight h4, .cardLeft h4, .card h4{
+        text-align: center;
+        transition: none;
+    }
+
+
+    #about {
+
+        margin: 10px 0;
+        height: 100%;
+    
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 2fr;    
+    
+    
+    }
+
+    .aboutContent {
+
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    
+    }
+    
+    .aboutContent div {
+    
+        padding: 10px;
+        text-align: center;
+    }
+    .aboutContent div p {
+    
+        padding: 0;
+        text-align: left;
+    }
+    
+    footer {
+
+            
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            gap: 30px;
+    
+    }
+    
+    .footer-content a {
+        margin: 10px 0;
+        padding: 0;
+    }
+
+
+
+
+    .pjHeading {
+
+        text-align: center;
+        margin: 8% 0;
+        font-size: 40px;
+
+    }
+
+
+    .pjContainer {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+
+    }
+
+    .pjImg {
+        border-radius: 10px;
+        width: 100%;
+        height: 125px;
+    }
+
+    .pjCard {
+        padding: 10px;
+    }
+
+
 }
