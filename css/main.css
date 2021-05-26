@@ -7,7 +7,6 @@
 }
 
 :root {
-
     --dark: #2F2E33;
     --light: #D5D6D2;
     --white: #f5f5f5; /* knækket hvid, da man ikke bør bruge fuld hvid/sort */
@@ -15,17 +14,90 @@
 
     --headline-font: font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     --text-font: transat, sans-serif;
-
     
-
 }
 
-html {
+/* #region "global" styling */
 
+html {
     scroll-behavior: smooth;
 
 }
 
+body {
+    background: var(--light);
+    color: var(--dark);
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--headline-font);
+
+}
+p {
+    font-family: var(--text-font);
+
+}
+
+.wrap {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1600px;
+
+}
+
+.imgFluid {
+    max-width: 100%;
+    height: auto;
+
+}
+
+.hover a{
+    position: relative;
+
+}
+
+.hover a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: var(--dark);
+
+    transition:  0.4s ease;
+    width: 0;
+
+}
+
+.active a:after {
+    width: 100%;
+    left: 0;
+}
+
+.hover a:hover:after {
+    width: 100%;
+    left: 0;
+
+}
+
+.readMore {
+    text-align: center;
+    margin-bottom: 5%;
+
+}
+
+.readMore a {
+    color: var(--dark);
+    font-family: var(--text-font);
+    font-size: 40px;
+    text-decoration: none;    
+
+}
+
+/* #endregion */
 
 /* #region Intro animations */
 
@@ -116,65 +188,6 @@ html {
 
 /* #endregion */
 
-/* "global" styling */
-
-body {
-    background: var(--light);
-    color: var(--dark);
-}
-
-.wrap {
-
-    width: 90%;
-    margin: 0 auto;
-    max-width: 1600px;
-
-}
-
-.imgFluid {
-    max-width: 100%;
-    height: auto;
-}
-
-.hover a{
-    position: relative;
-}
-
-.hover a:after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background: var(--dark);
-
-    transition:  0.4s ease;
-    width: 0;
-}
-
-.hover a:hover:after {
-    width: 100%;
-    left: 0;
-}
-
-.readMore {
-    text-align: center;
-    margin-bottom: 5%;
-}
-
-.readMore a {
-
-    color: var(--dark);
-    font-family: var(--text-font);
-    font-size: 40px;
-    text-decoration: none;    
-}
-
-
-
-
 /* #region header */
 
 header {
@@ -221,10 +234,6 @@ header {
     
 }
 
-
-/* #endregion */
-
-
 #bigHeading {
     
     margin: 7% 0 0 0;
@@ -236,7 +245,7 @@ header {
 
 }
 
-
+/* #endregion */
 
 /* #region main */
 
@@ -248,7 +257,7 @@ main {
     
 }
 
-/* #region projects */
+/* #region projects section */
 
 .card {   
     
@@ -315,7 +324,7 @@ main {
 
 /* #endregion */
 
-/* #region about */
+/* #region about section */
 
 #about {
 
@@ -392,8 +401,7 @@ main {
 /* #endregion about */
 
 
-
-/* #region contact */
+/* #region contact section */
 
 
 .contact h4{
@@ -480,11 +488,10 @@ footer {
 
 /* #endregion footer */
 
-
 /* #region projects page */
 
 
-.pjHeading {
+.heading {
 
     text-align: center;
     margin: 2% 0;
@@ -557,8 +564,9 @@ footer {
     width: 100%;
     height: 100%;
     border-radius: 10px;
+    color: var(--light);
     
-    transition: .3s;
+    transition: .3s ease;
 
 }
 
@@ -567,7 +575,6 @@ footer {
 
     opacity: 1;
     background-color: #2f2e3370;
-    color: var(--light);
 }
 
 
@@ -579,9 +586,71 @@ footer {
 
 /* #endregion */
 
+/* #region about page*/
+
+.aboutHeading {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.aboutHeading div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    
+}
+
+.aboutHeading div *{
+    text-decoration: none;
+    color: var(--dark);
+    margin: 10px 0;
+}
+
+.aboutHeading h1 {
+
+    text-align: left;
+    margin: 0;
+    font-size: 40px;
+    width: 100%;
+    font-family: var(--text-font);
+    font-weight: 100;
+    line-height: 1.5;
+}
+
+.aboutExperience {
+    background-color: var(--dark);
+    color: var(--light);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 1px solid var(--light);
+}
+
+.aboutExperience div {
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.aboutExperience div h2 {
+    margin: -20px 0 0 0;
+    font-size: 30px;
+}
+
+.aboutExperience div p {
+    
+    font-size: 20px;
+}
+
+#aboutContact {
+    margin: 40px;
+}
 
 
-
+/* #endregion about page */
 
 @media (max-width: 768px) {
 	
@@ -694,7 +763,7 @@ footer {
 
 
 
-    .pjHeading {
+    .heading {
 
         text-align: center;
         margin: 8% 0;
@@ -720,6 +789,33 @@ footer {
 
     .pjCard {
         padding: 10px;
+    }
+
+    .aboutHeading {
+
+        
+        grid-template-columns: none;
+        grid-template-rows: 10fr;
+    }
+
+    .aboutHeading h1 {
+        font-size: 30px;
+        text-align: left;
+        padding: 15px;
+    }
+
+    .aboutHeading div {
+        display: none;
+    }
+
+    .aboutExperience {
+
+        grid-template-columns: none;
+    }
+
+    .aboutExperience h2 {
+        text-align: center;
+        
     }
 
 
