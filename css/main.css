@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;  /* definerer hvordan størrelsen blier regnet -> om padding og border skal "skubbe" eller ej */
+    box-sizing: border-box;  /* definerer hvordan størrelsen bliver regnet -> om padding og border skal "skubbe" eller ej */
 }
 
 :root {
@@ -14,7 +14,7 @@
 
     --headline-font: font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     --text-font: transat, sans-serif;
-    
+
 }
 
 /* #region "global" styling */
